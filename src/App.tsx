@@ -12,22 +12,23 @@ export default function Page() {
 
   const getNoButtonText = () => {
     const phrases = [
-      "No",
-      "Are you sure?",
-      "What if I asked really nicely?",
-      "Pretty please",
-      "With a chocolate rice cake on top",
-      "What about a matcha frostie",
-      "PLEASE POOKIE",
-      "But :*(",
-      "I am going to die",
-      "Yep im dead",
-      "ok ur talking to nathan's ghost",
-      "please babe",
+      "no",
+      "are you sure?",
+      "but pizza?",
+      "you better not click no",
+      "i'll make you some soup",
+      "i'll take you to frozen yogurt",
+      "PLEASE",
+      "but :*(",
+      "i am going to die",
+      "yep im dead",
+      "ok ur talking to kyle's ghost",
+      "ur done",
       ":((((",
       "PRETTY PLEASE",
-      "Estoy muerto",
-      "No :(",
+      "estoy muerto",
+      "gg",
+      "that's it im gone"
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -38,7 +39,7 @@ export default function Page() {
       {yesPressed ? (
         <>
           <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-          <div className="my-4 text-4xl font-bold">WOOOOOO!!! I love you pookie!! ;))</div>
+          <div className="my-4 text-4xl">哇哇哇, 我好开心!! ;))</div>
         </>
       ) : (
         <>
@@ -46,20 +47,20 @@ export default function Page() {
             className="h-[200px]"
             src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
           />
-          <h1 className="my-4 text-4xl">Will you be my Valentine?</h1>
+          <h1 className="my-4 text-4xl">你愿意做我的情人吗?</h1>
           <div className="flex items-center">
             <button
               className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
               style={{ fontSize: yesButtonSize }}
               onClick={() => setYesPressed(true)}
             >
-              Yes
+              yes
             </button>
             <button
               onClick={handleNoClick}
               className=" rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
             >
-              {noCount === 0 ? "No" : getNoButtonText()}
+              {noCount === 0 ? "no" : getNoButtonText()}
             </button>
           </div>
         </>
